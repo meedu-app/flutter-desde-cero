@@ -7,7 +7,7 @@ import 'package:ui_ux/src/ui/global_widgets/rounded_button.dart';
 import 'package:ui_ux/src/utils/font_styles.dart';
 
 class WelcomePage extends StatelessWidget {
-  const WelcomePage({Key key}) : super(key: key);
+  const WelcomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

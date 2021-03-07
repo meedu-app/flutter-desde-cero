@@ -6,14 +6,14 @@ import 'onboard_controller.dart';
 import 'widgets/bottom_controls.dart';
 
 class OnboardPage extends StatelessWidget {
-  const OnboardPage({Key key}) : super(key: key);
+  const OnboardPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<OnboardController>(
       create: (_) {
         final controller = OnboardController();
-        WidgetsBinding.instance.addPostFrameCallback((_) {
+        WidgetsBinding.instance!.addPostFrameCallback((_) {
           controller.afterFirstlayout();
         });
         return controller;

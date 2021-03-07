@@ -8,11 +8,11 @@ import 'package:ui_ux/src/utils/dialogs.dart';
 import '../register_controller.dart';
 
 class RegisterForm extends StatelessWidget {
-  const RegisterForm({Key key}) : super(key: key);
+  const RegisterForm({Key? key}) : super(key: key);
 
   void _submit(BuildContext context) async {
     final controlller = context.read<RegisterController>();
-    final isFormOk = controlller.formKey.currentState.validate();
+    final isFormOk = controlller.formKey.currentState!.validate();
     if (isFormOk) {
       ProgressDialog.show(context);
       final isOk = await controlller.submit();

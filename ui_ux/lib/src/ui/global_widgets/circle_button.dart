@@ -9,9 +9,9 @@ class CircleButton extends StatelessWidget {
   final double size;
   final Color backgroundColor, iconColor;
   const CircleButton({
-    Key key,
-    @required this.onPressed,
-    @required this.iconPath,
+    Key? key,
+    required this.onPressed,
+    required this.iconPath,
     this.size = 40,
     this.backgroundColor = primaryColor,
     this.iconColor = Colors.white,

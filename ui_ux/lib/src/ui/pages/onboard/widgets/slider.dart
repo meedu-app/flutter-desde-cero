@@ -7,7 +7,7 @@ import 'package:ui_ux/src/utils/font_styles.dart';
 import '../onboard_controller.dart';
 
 class OnboardSlider extends StatelessWidget {
-  const OnboardSlider({Key key}) : super(key: key);
+  const OnboardSlider({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

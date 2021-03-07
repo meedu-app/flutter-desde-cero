@@ -10,7 +10,7 @@ import '../onboard_controller.dart';
 
 class OnboardControls extends StatelessWidget {
   const OnboardControls({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   void _onNext(BuildContext context, OnboardController controller) {
@@ -37,7 +37,7 @@ class OnboardControls extends StatelessWidget {
           _Dots(),
           Consumer<OnboardController>(
             builder: (_, controller, __) {
-              final double page = controller.currentPage;
+              final double page = controller.currentPage!;
               bool isEnd = page % 1 == 0 && page == 2.0;
               return CupertinoButton(
                 child: Text(
@@ -61,14 +61,14 @@ class OnboardControls extends StatelessWidget {
 }
 
 class _Dots extends StatelessWidget {
-  const _Dots({Key key}) : super(key: key);
+  const _Dots({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final controller = context.watch<OnboardController>();
     return DotsIndicator(
       dotsCount: controller.items.length,
-      position: controller.currentPage,
+      position: controller.currentPage!,
       decorator: DotsDecorator(
         size: const Size.square(9.0),
         activeSize: const Size(18.0, 9.0),

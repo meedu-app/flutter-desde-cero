@@ -7,7 +7,7 @@ class AuthenticationRepositoryImpl implements AuthenticationRepository {
   AuthenticationRepositoryImpl(this._authenticationProvider);
 
   @override
-  Future<User> login(String email, String password) {
+  Future<User?> login(String email, String password) {
     return _authenticationProvider.login(email, password);
   }
 

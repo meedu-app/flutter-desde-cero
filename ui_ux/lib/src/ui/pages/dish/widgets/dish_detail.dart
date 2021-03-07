@@ -12,11 +12,11 @@ import 'dish_counter.dart';
 
 class DishDetail extends StatelessWidget {
   const DishDetail({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   void _toggleFavorite(BuildContext context) {
-    final homeController = Get.i.find<HomeController>();
+    final homeController = Get.i.find<HomeController>()!;
     final controller = context.read<DishController>();
     if (!controller.isFavorite) {
       final SnackBar snackBar = SnackBar(
@@ -26,7 +26,8 @@ class DishDetail extends StatelessWidget {
         ),
         backgroundColor: primaryColor,
       );
-      Scaffold.of(context).showSnackBar(snackBar);
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      // Scaffold.of(context).showSnackBar(snackBar);
     }
     controller.toggleFavorite();
     homeController.toggleFavorite(controller.dish);

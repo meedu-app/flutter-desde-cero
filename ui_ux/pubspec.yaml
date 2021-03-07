@@ -18,18 +18,19 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.0
-  provider: ^4.3.3
-  google_fonts: ^1.1.1
-  cached_network_image: ^2.5.0
-  flutter_svg: ^0.19.1
-  dots_indicator: ^1.2.0
-  flutter_slidable: ^0.5.7
+  cupertino_icons: ^1.0.2
+  provider: ^5.0.0
+  google_fonts: ^2.0.0
+  cached_network_image: ^3.0.0-nullsafety
+  flutter_svg: ^0.21.0-nullsafety.0
+  dots_indicator:
+    git: https://github.com/hlavki/dots_indicator.git
+  flutter_slidable: ^0.6.0-nullsafety.0
   
 
 dev_dependencies:

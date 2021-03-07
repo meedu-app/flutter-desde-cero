@@ -4,16 +4,16 @@ import 'package:ui_ux/src/utils/colors.dart';
 import 'package:ui_ux/src/utils/font_styles.dart';
 
 class RoundedButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String label;
   final Color textColor, backgroundColor, borderColor;
   final bool fullWidth;
   final EdgeInsets padding;
-  final double fontSize;
+  final double? fontSize;
   const RoundedButton({
-    Key key,
+    Key? key,
     @required this.onPressed,
-    @required this.label,
+    required this.label,
     this.textColor = Colors.white,
     this.backgroundColor = primaryColor,
     this.borderColor = primaryColor,

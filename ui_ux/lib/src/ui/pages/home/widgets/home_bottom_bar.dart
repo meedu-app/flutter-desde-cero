@@ -7,7 +7,7 @@ import 'package:ui_ux/src/ui/pages/home/widgets/home_indicator.dart';
 import 'package:ui_ux/src/utils/colors.dart';
 
 class HomeBottomBar extends StatelessWidget {
-  HomeBottomBar({Key key}) : super(key: key);
+  HomeBottomBar({Key? key}) : super(key: key);
 
   final List<_BottomBarItem> _items = [
     _BottomBarItem(
@@ -56,9 +56,9 @@ class HomeBottomBar extends StatelessWidget {
 
 class BottomBarTab extends StatelessWidget {
   const BottomBarTab({
-    Key key,
-    @required this.item,
-    @required this.isActive,
+    Key? key,
+    required this.item,
+    required this.isActive,
   }) : super(key: key);
 
   final _BottomBarItem item;
@@ -83,7 +83,7 @@ class _BottomBarItem {
   final String icon, label;
 
   _BottomBarItem({
-    @required this.icon,
-    @required this.label,
+    required this.icon,
+    required this.label,
   });
 }

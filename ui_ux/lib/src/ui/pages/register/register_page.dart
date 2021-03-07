@@ -6,7 +6,7 @@ import 'package:ui_ux/src/utils/font_styles.dart';
 import 'widgets/register_form.dart';
 
 class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key key}) : super(key: key);
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

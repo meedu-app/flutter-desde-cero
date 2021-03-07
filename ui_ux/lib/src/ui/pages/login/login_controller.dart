@@ -5,7 +5,7 @@ import 'package:ui_ux/src/helpers/get.dart';
 
 class LoginController extends ChangeNotifier {
   String _email = '', _password = '';
-  final AuthenticationRepository _repository = Get.i.find<AuthenticationRepository>();
+  final AuthenticationRepository? _repository = Get.i.find<AuthenticationRepository>();
 
   void onEmailChanged(String text) {
     _email = text;
@@ -15,7 +15,7 @@ class LoginController extends ChangeNotifier {
     _password = text;
   }
 
-  Future<User> submit() async {
-    return _repository.login(_email, _password);
+  Future<User?> submit() async {
+    return _repository!.login(_email, _password);
   }
 }

@@ -5,7 +5,7 @@ import 'package:ui_ux/src/data/repositories/food_menu_repository.dart';
 import 'package:ui_ux/src/helpers/get.dart';
 
 class HomeTabController extends ChangeNotifier {
-  final FoodMenuRepository _foodMenuRepository = Get.i.find<FoodMenuRepository>();
+  final FoodMenuRepository? _foodMenuRepository = Get.i.find<FoodMenuRepository>();
 
   final List<Category> categories = [
     Category(
@@ -34,7 +34,7 @@ class HomeTabController extends ChangeNotifier {
   }
 
   void _init() async {
-    _popularMenu = await _foodMenuRepository.getPopularMenu();
+    _popularMenu = await _foodMenuRepository!.getPopularMenu();
     notifyListeners();
   }
 }

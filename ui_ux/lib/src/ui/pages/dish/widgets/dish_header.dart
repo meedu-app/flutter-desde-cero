@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:ui_ux/src/ui/pages/dish/dish_controller.dart';
 
 class DishHeader extends StatelessWidget {
-  const DishHeader({Key key}) : super(key: key);
+  const DishHeader({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

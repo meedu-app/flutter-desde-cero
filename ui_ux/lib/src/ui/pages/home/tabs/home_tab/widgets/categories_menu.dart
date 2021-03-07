@@ -7,7 +7,7 @@ import 'package:ui_ux/src/ui/pages/home/tabs/home_tab/home_tab_controller.dart';
 import 'package:ui_ux/src/utils/font_styles.dart';
 
 class CategoriesMenu extends StatelessWidget {
-  const CategoriesMenu({Key key}) : super(key: key);
+  const CategoriesMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +33,9 @@ class CategoriesMenu extends StatelessWidget {
 
 class CategoryButton extends StatelessWidget {
   const CategoryButton({
-    Key key,
-    @required this.category,
-    @required this.isFirst,
+    Key? key,
+    required this.category,
+    required this.isFirst,
   }) : super(key: key);
 
   final Category category;

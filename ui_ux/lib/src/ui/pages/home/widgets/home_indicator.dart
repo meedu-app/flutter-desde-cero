@@ -11,7 +11,7 @@ class HomeTabBarIndicator extends Decoration {
     this.size = 5,
   });
   @override
-  BoxPainter createBoxPainter([void Function() onChanged]) {
+  BoxPainter createBoxPainter([void Function()? onChanged]) {
     return _CustomPainter(this.color, this.size);
   }
 }
@@ -30,8 +30,8 @@ class _CustomPainter extends BoxPainter {
   ) {
     final Paint paint = Paint();
     paint.color = this.color;
-    final width = configuration.size.width;
-    final height = configuration.size.height;
+    final width = configuration.size!.width;
+    final height = configuration.size!.height;
     final Offset pos = Offset(offset.dx + width / 2, offset.dy + height - 5);
     canvas.drawCircle(pos, this.size / 2, paint);
   }

@@ -1,8 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsTab extends StatefulWidget {
-  NotificationsTab({Key key}) : super(key: key);
+  NotificationsTab({Key? key}) : super(key: key);
 
   @override
   _NotificationsTabState createState() => _NotificationsTabState();

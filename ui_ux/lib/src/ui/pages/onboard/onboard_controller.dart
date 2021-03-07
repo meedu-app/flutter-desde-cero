@@ -21,12 +21,12 @@ class OnboardController extends ChangeNotifier {
   ];
 
   final PageController pageController = PageController();
-  double _currentPage = 0;
-  double get currentPage => _currentPage;
+  double? _currentPage = 0;
+  double? get currentPage => _currentPage;
 
   void afterFirstlayout() {
     pageController.addListener(() {
-      final double page = pageController.page;
+      final double? page = pageController.page;
       _currentPage = page;
       notifyListeners();
       // if (page % 1 == 0 && _currentPage != page) {

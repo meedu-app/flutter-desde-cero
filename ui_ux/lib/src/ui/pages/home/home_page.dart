@@ -9,14 +9,14 @@ import 'package:ui_ux/src/ui/pages/home/tabs/profile_tab.dart';
 import 'package:ui_ux/src/ui/pages/home/widgets/home_bottom_bar.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<HomeController>(
       create: (_) {
         final controller = HomeController();
-        WidgetsBinding.instance.addPostFrameCallback((_) {
+        WidgetsBinding.instance!.addPostFrameCallback((_) {
           controller.afterFirstLayout();
         });
 

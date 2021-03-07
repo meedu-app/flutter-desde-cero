@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 abstract class Dialogs {
   static Future<void> alert(
     BuildContext context, {
-    String title,
-    String description,
+    String? title,
+    String? description,
     String okText = "OK",
     bool dismissible = true,
   }) {

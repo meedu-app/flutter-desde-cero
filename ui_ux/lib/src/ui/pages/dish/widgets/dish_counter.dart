@@ -4,7 +4,7 @@ import 'package:ui_ux/src/utils/font_styles.dart';
 
 class DishCounter extends StatefulWidget {
   final void Function(int) onChanged;
-  DishCounter({Key key, @required this.onChanged}) : super(key: key);
+  DishCounter({Key? key, required this.onChanged}) : super(key: key);
 
   @override
   _DishCounterState createState() => _DishCounterState();

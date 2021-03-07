@@ -7,11 +7,11 @@ import 'dish_item.dart';
 class HorizontalDishes extends StatelessWidget {
   final List<Dish> dishes;
   final String title;
-  final VoidCallback onViewAll;
+  final VoidCallback? onViewAll;
   const HorizontalDishes({
-    Key key,
-    @required this.dishes,
-    @required this.title,
+    Key? key,
+    required this.dishes,
+    required this.title,
     this.onViewAll,
   }) : super(key: key);
 

@@ -9,9 +9,9 @@ import 'package:ui_ux/src/utils/font_styles.dart';
 
 class DishHomeItem extends StatelessWidget {
   const DishHomeItem({
-    Key key,
-    @required this.item,
-    @required this.isFirst,
+    Key? key,
+    required this.item,
+    required this.isFirst,
   }) : super(key: key);
 
   final bool isFirst;

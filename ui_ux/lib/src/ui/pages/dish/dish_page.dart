@@ -10,7 +10,7 @@ import 'package:ui_ux/src/ui/pages/home/home_controller.dart';
 import 'widgets/dish_detail.dart';
 
 class DishPage extends StatelessWidget {
-  const DishPage({Key key}) : super(key: key);
+  const DishPage({Key? key}) : super(key: key);
 
   void _setStatusBar(bool light) {
     SystemChrome.setSystemUIOverlayStyle(light ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark);
@@ -20,8 +20,8 @@ class DishPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DishController>(
       create: (_) {
-        final homeController = Get.i.find<HomeController>();
-        final DishPageArguments args = ModalRoute.of(context).settings.arguments;
+        final homeController = Get.i.find<HomeController>()!;
+        final DishPageArguments args = ModalRoute.of(context)!.settings.arguments as DishPageArguments;
         final isFavorite = homeController.isFavorite(args.dish);
         final controller = DishController(args, isFavorite);
         _setStatusBar(true);

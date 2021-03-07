@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_ux/src/data/models/dish.dart';
 import 'package:ui_ux/src/ui/pages/home/tabs/home_tab/home_tab_controller.dart';
@@ -11,7 +10,7 @@ import 'package:ui_ux/src/utils/font_styles.dart';
 import 'widgets/search_button.dart';
 
 class HomeTab extends StatefulWidget {
-  const HomeTab({Key key}) : super(key: key);
+  const HomeTab({Key? key}) : super(key: key);
 
   @override
   _HomeTabState createState() => _HomeTabState();
@@ -25,7 +24,7 @@ class _HomeTabState extends State<HomeTab> with AutomaticKeepAliveClientMixin {
     return ChangeNotifierProvider<HomeTabController>(
       create: (_) {
         final controller = HomeTabController();
-        WidgetsBinding.instance.addPostFrameCallback((_) {
+        WidgetsBinding.instance!.addPostFrameCallback((_) {
           controller.afterFirstLayout();
         });
         return controller;

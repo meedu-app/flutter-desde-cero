@@ -14,7 +14,7 @@ class _FavoritesTabState extends State<FavoritesTab> with AutomaticKeepAliveClie
   Widget build(BuildContext context) {
     super.build(context);
 
-    final favorites = context.select<HomeController, Map<int, Dish>>((_) => _.favorites).values.toList();
+    final favorites = context.select<HomeController, Map<int?, Dish>>((_) => _.favorites).values.toList();
 
     return ListView.builder(
       itemBuilder: (_, index) => FavoriteItem(
